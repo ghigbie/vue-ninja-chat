@@ -6,6 +6,7 @@
         <form @submit.prevent="enterChat">
           <label for="name">Enter your name:</label>
           <input type="text" name="name" v-model="name"/>
+          <button class="btn teal">Enter the Ninja Chat</button>
         </form>
       </div>
     </div>
@@ -19,6 +20,12 @@ export default {
     return {
       name: null,
     };
+  },
+  methods: {
+    enterChat(){
+      console.log('Enter chat called');
+      console.log(this.name);
+    }
   }
 }
 </script>
