@@ -1,6 +1,14 @@
 <template>
-  <div class="welcome">
-    <h1>Welcome</h1>
+  <div class="welcome container">
+    <div class="card">
+      <div class="card-content center-align">
+        <h2 class="teal-text">Welcome</h2>
+        <form @submit.prevent="enterChat">
+          <label for="name">Enter your name:</label>
+          <input type="text" name="name" v-model="name"/>
+        </form>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -9,7 +17,7 @@ export default {
   name: 'Welcome',
   data () {
     return {
-
+      name: null,
     };
   }
 }
