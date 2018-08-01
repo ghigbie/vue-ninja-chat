@@ -1,5 +1,5 @@
 <template>
-    <div class="chat">
+    <div class="chat container">
         <h2>Chat</h2>
     </div>
 </template>
