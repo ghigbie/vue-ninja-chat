@@ -1,6 +1,6 @@
 # ninja-chat
 
-> A Vue.js project
+This repo is a VueJS chat application. It makes use of VueJS, Vue Router, and Firebase.
 
 ## Build Setup
 
