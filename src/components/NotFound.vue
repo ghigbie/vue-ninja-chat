@@ -1,5 +1,7 @@
 <template>
-    <h1 class="not-found">Sorry, but this page does not exist.</h1>
+    <div class="container">
+        <h1 class="not-found">Sorry, but this page does not exist.</h1>
+    </div>
 </template>
 
 <script>
