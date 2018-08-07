@@ -17,7 +17,7 @@ export default new Router({
       path: '/chat',
       name: 'Chat',
       component: Chat,
-      props: true
+      props: true, //this allows props to be passed to the chat route
     }
   ]
 })
