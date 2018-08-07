@@ -18,6 +18,11 @@ export default new Router({
       name: 'Chat',
       component: Chat,
       props: true, //this allows props to be passed to the chat route
+      beforeEnter: (to, from, next) => {
+        if(to.params.name){
+          next();
+        }
+      }
     }
   ]
 })
