@@ -69,4 +69,11 @@ export default {
     li{
         list-style-type: none;
     }
+    .messages{
+        max-height: 300px;
+        overflow: auto;
+    }
+    .message::-webkit-scrollbar-track{
+        background: #ddd;
+    }
 </style>
