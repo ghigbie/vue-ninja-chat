@@ -37,7 +37,7 @@ export default {
     created(){
         let ref = db.collection('messages').orderBy('timestamp'); //the orderby method orders the message by the timestamp
         ref.onSnapshot(snapshot => {
-            snapshot.docChanges(changes => {
+            snapshot.docChanges.forEach(change => {
                 if(change.type === 'added'){
                     let doc = change.doc;
                     this.messages.push({

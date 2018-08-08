@@ -2,7 +2,7 @@
     <div class="new-message">
         <form @submit.prevent="addMessage">
             <label for="new-message">New Message (enter to add)</label>
-            <input type="text" name="new-message" v-model="message"/>
+            <input type="text" name="new-message" v-model="newMessage"/>
             <p class="red-text" v-if="feedback">{{ feedback }}</p>
             <button class="btn teal">Send Message</button>
         </form>
