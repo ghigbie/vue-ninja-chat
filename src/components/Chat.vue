@@ -22,6 +22,7 @@
 <script>
 import NewMessage from './NewMessage';
 import db from '@/firebase/init';
+import moment from 'moment';
 
 export default {
     name: 'Chat',
@@ -35,8 +36,9 @@ export default {
         };
     },
     created(){
-        let ref = db.collection('messages').orderBy('timestamp'); //the orderby method orders the message by the timestamp
+        let ref = db.collection('message').orderBy('timestamp'); //the orderby method orders the message by the timestamp
         ref.onSnapshot(snapshot => {
+            console.log('snap', snapshot.docChanges);
             snapshot.docChanges.forEach(change => {
                 if(change.type === 'added'){
                     let doc = change.doc;
@@ -46,7 +48,7 @@ export default {
                         content: doc.data().content,
                         timestamp: moment(doc.data().timestamp).format('lll')
                     })
-          s      }
+                }
             })
         });
     }
