@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import VueChatScroll from 'vue-chat-scroll';
 import Welcome from '@/components/Welcome';
 import Chat from '@/components/Chat';
 import NotFound from '@/components/NotFound';
