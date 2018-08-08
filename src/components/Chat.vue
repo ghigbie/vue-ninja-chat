@@ -7,7 +7,7 @@
                     <li v-for="(message, index) in messages" 
                         key="index">
                         <span class="teal-text">{{ messaage.name }}</span>
-                        <span class="grey-text text-darken-3">{{ message.content }}/span>
+                        <span class="grey-text text-darken-3">{{ message.content }}</span>
                         <span class="grey-text time">{{ message.timestamp }}</span>
                     </li>
                 </ul>
