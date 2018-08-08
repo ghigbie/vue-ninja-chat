@@ -42,9 +42,9 @@ export default {
                     let doc = change.doc;
                     this.messages.push({
                         id: doc.id,
-                        name: doc.name,
-                        content: doc.content,
-                        timestamp: doc.timestamp
+                        name: doc.data().name,
+                        content: doc.data().content,
+                        timestamp: doc.data().timestamp
                     })
           s      }
             })
