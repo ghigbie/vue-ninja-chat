@@ -21,6 +21,7 @@
 
 <script>
 import NewMessage from './NewMessage';
+import db from '@/firebase/init';
 
 export default {
     name: 'Chat',
@@ -32,6 +33,9 @@ export default {
         return {
             messages: []
         };
+    },
+    created(){
+
     }
 
 }

@@ -5,7 +5,7 @@
             <label for="new-message">New Message (enter to add)</label>
             <input type="text" name="new-message" />
             <p class="red-text" v-if="feedback">{{ feedback }}</p>
-            <button></button>
+            <button class="btn teal">Send Message</button>
         </form>
 
     </div>
