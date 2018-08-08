@@ -44,7 +44,7 @@ export default {
                         id: doc.id,
                         name: doc.data().name,
                         content: doc.data().content,
-                        timestamp: doc.data().timestamp
+                        timestamp: moment(doc.data().timestamp).format('lll')
                     })
           s      }
             })
@@ -64,7 +64,7 @@ export default {
     }
     .chat .time{
         display: block;
-        font-size: 1.2em;
+        font-size: .8em;
     }
     li{
         list-style-type: none;
