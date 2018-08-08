@@ -3,7 +3,7 @@
         <h2 class="center teal-text">Ninja Chat</h2>
         <div class="card">
             <div class="card-content">
-                <ul class="messages">
+                <ul class="messages" v-chat-scroll>
                     <li v-for="message in messages" 
                         :key="message.id">
                         <span class="teal-text">{{ message.name }}</span>

@@ -1,9 +1,8 @@
 <template>
     <div class="new-message">
-        <h2>New Message</h2>
         <form @submit.prevent="addMessage">
             <label for="new-message">New Message (enter to add)</label>
-            <input type="text" name="new-message" />
+            <input type="text" name="new-message" v-model="message"/>
             <p class="red-text" v-if="feedback">{{ feedback }}</p>
             <button class="btn teal">Send Message</button>
         </form>
@@ -26,7 +25,6 @@ export default {
     methods:{
         addMessage(){
             if(this.newMessage){
-                this.feedback = null;
                 db.collection('message').add({
                     content: this.newMessage,
                     name: this.name,
@@ -35,6 +33,7 @@ export default {
                     console.log(err);
                 });
                 this.newMessage = null;
+                this.feedback = null;
             }else{
                 this.feedback = 'Please enter a message to chat : )'
             }
