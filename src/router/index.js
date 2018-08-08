@@ -5,7 +5,8 @@ import Welcome from '@/components/Welcome';
 import Chat from '@/components/Chat';
 import NotFound from '@/components/NotFound';
 
-Vue.use(Router)
+Vue.use(Router);
+Vue.use(VueChatScroll);
 
 export default new Router({
   mode: 'history',
