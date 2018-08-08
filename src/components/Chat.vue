@@ -35,7 +35,7 @@ export default {
         };
     },
     created(){
-        let ref = db.collection('messages');
+        let ref = db.collection('messages').orderBy('timestamp'); //the orderby method orders the message by the timestamp
         ref.onSnapshot(snapshot => {
             snapshot.docChanges(changes => {
                 if(change.type === 'added'){
