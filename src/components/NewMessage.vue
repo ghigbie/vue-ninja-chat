@@ -26,11 +26,15 @@ export default {
     methods:{
         addMessage(){
             if(this.newMessage){
+                this.feedback = null;
                 db.collection('message').add({
                     content: this.newMessage,
                     name: this.name,
                     timestamp: Date.now()
-                })
+                }).catch(err => {
+                    console.log(err);
+                });
+                this.newMessage = null;
             }else{
                 this.feedback = 'Please enter a message to chat : )'
             }
