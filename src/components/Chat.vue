@@ -4,9 +4,9 @@
         <div class="card">
             <div class="card-content">
                 <ul class="messages">
-                    <li v-for="(message, index) in messages" 
-                        key="index">
-                        <span class="teal-text">{{ messaage.name }}</span>
+                    <li v-for="message in messages" 
+                        :key="message.id">
+                        <span class="teal-text">{{ message.name }}</span>
                         <span class="grey-text text-darken-3">{{ message.content }}</span>
                         <span class="grey-text time">{{ message.timestamp }}</span>
                     </li>
@@ -35,7 +35,20 @@ export default {
         };
     },
     created(){
-
+        let ref = db.collection('messages');
+        ref.onSnapshot(snapshot => {
+            snapshot.docChanges(changes => {
+                if(change.type === 'added'){
+                    let doc = change.doc;
+                    this.messages.push({
+                        id: doc.id,
+                        name: doc.name,
+                        content: doc.content,
+                        timestamp: doc.timestamp
+                    })
+          s      }
+            })
+        });
     }
 
 }
